@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum Login</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Roboto:wght@300;400;500&display=swap">
+    <link rel="stylesheet" href="/static/css/styles.css?v=1.0">
+</head>
+<body>
+    <div class="bg-circle circle-1"></div>
+    <div class="bg-circle circle-2"></div>
+    
+    <div class="particles" id="particles"></div>
+    
+    <div class="login-container">
+        <div class="login-header">
+            <h1>LOGIN</h1>
+            <p>Enter your credentials to continue</p>
+        </div>
+        
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="username">USER ID</label>
+                <input type="text" id="username" name="username" required autocomplete="off">
+                <div class="error-message" id="usernameError"></div>
+            </div>
+            
+            <div class="form-group">
+                <label for="password">AUTH CODE</label>
+                <input type="password" id="password" name="password" required autocomplete="off">
+                <div class="error-message" id="passwordError"></div>
+            </div>
+            
+            <button type="submit" class="login-btn">
+                <span>INITIATE LOGIN</span>
+            </button>
+        </form>
+        
+        <div class="login-footer">
+            <a href="#" id="forgotLink">RECOVER CREDENTIALS</a> | 
+            <a href="#" id="signupLink">REQUEST ACCESS</a>
+        </div>
+    </div>
+
+    <script src="/static/js/script.js?v=1.0"></script>
+</body>
+</html>

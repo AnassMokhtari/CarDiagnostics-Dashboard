@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Diagnostics Dashboard</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Montserrat:wght@600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/static/css/dashboard.css?v=1.0">
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Header -->
+        <div class="header">
+            <h1 class="title">Car <span>Diagnostics</span></h1>
+            <div class="car-info">
+                <div class="car-icon">
+                    <i class="fas fa-car"></i>
+                </div>
+                <div class="car-meta">
+                    <h2>BMW M5 Competition</h2>
+                    <p>VIN: WBSJF0C05L6P12345 • Last update: Just now</p>
+                </div>
+                <div class="status">Optimal</div>
+            </div>
+        </div>
+
+        <!-- Engine & Critical Systems -->
+        <div class="grid">
+            <!-- Engine Temperature -->
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title"><i class="fas fa-temperature-high"></i> Engine Temp</h3>
+                    <div class="card-value">92°C</div>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 65%;"></div>
+                </div>
+                <div class="card-footer">
+                    <span>Optimal: 85-105°C</span>
+                    <span>Status: Normal</span>
+                </div>
+            </div>
+
+            <!-- Oil Pressure -->
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title"><i class="fas fa-oil-can"></i> Oil Pressure</h3>
+                    <div class="card-value">2.8 bar</div>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 70%;"></div>
+                </div>
+                <div class="card-footer">
+                    <span>Optimal: 2.5-3.5 bar</span>
+                    <span>Status: Normal</span>
+                </div>
+            </div>
+
+            <!-- Battery Voltage -->
+            <div class="card warning">
+                <div class="card-header">
+                    <h3 class="card-title"><i class="fas fa-battery-three-quarters"></i> Battery</h3>
+                    <div class="card-value">11.8V</div>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 45%;"></div>
+                </div>
+                <div class="card-footer">
+                    <span>Optimal: 12.6-14.4V</span>
+                    <span>Status: Low</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Detailed Engine Stats -->
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-title">Engine Load</div>
+                <div class="stat-value">68%</div>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 68%;"></div>
+                </div>
+            </div>
+            <div class="stat">
+                <div class="stat-title">Intake Air Temp</div>
+                <div class="stat-value">42°C</div>
+            </div>
+            <div class="stat">
+                <div class="stat-title">Fuel Pressure</div>
+                <div class="stat-value">3.2 bar</div>
+            </div>
+            <div class="stat">
+                <div class="stat-title">Throttle Position</div>
+                <div class="stat-value">22%</div>
+            </div>
+            <div class="stat">
+                <div class="stat-title">Oil Temperature</div>
+                <div class="stat-value">94°C</div>
+            </div>
+            <div class="stat">
+                <div class="stat-title">Coolant Level</div>
+                <div class="stat-value">OK</div>
+            </div>
+        </div>
+
+        <!-- Alerts Section -->
+        <div class="alerts">
+            <div class="alerts-header">
+                <i class="fas fa-exclamation-triangle"></i>
+                <h3>Active Alerts (2)</h3>
+            </div>
+            <div class="alert-item">
+                <i class="fas fa-bolt"></i>
+                <div>
+                    <strong>Low Battery Voltage</strong>
+                    <p>Battery voltage below optimal level (11.8V)</p>
+                </div>
+            </div>
+            <div class="alert-item">
+                <i class="fas fa-oil-can"></i>
+                <div>
+                    <strong>Oil Change Due</strong>
+                    <p>Engine oil life remaining: 12%</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Maintenance Section -->
+        <div class="maintenance-item">
+            <div class="maintenance-info">
+                <div class="maintenance-icon"><i class="fas fa-oil-can"></i></div>
+                <div class="maintenance-text">
+                    <h4>Engine Oil Change</h4>
+                    <p>Due in 500 km or 30 days</p>
+                    <div class="maintenance-progress">
+                        <div class="progress-bar" style="width: 12%;"></div>
+                    </div>
+                </div>
+            </div>
+            <button class="btn">Schedule</button>
+        </div>
+        <div class="maintenance-item">
+            <div class="maintenance-info">
+                <div class="maintenance-icon"><i class="fas fa-tire"></i></div>
+                <div class="maintenance-text">
+                    <h4>Tire Rotation</h4>
+                    <p>Due in 1,200 km or 60 days</p>
+                    <div class="maintenance-progress">
+                        <div class="progress-bar" style="width: 65%;"></div>
+                    </div>
+                </div>
+            </div>
+            <button class="btn">Schedule</button>
+        </div>
+        <div class="maintenance-item">
+            <div class="maintenance-info">
+                <div class="maintenance-icon"><i class="fas fa-wind"></i></div>
+                <div class="maintenance-text">
+                    <h4>Cabin Air Filter</h4>
+                    <p>Due in 3,000 km or 90 days</p>
+                    <div class="maintenance-progress">
+                        <div class="progress-bar" style="width: 80%;"></div>
+                    </div>
+                </div>
+            </div>
+            <button class="btn">Schedule</button>
+        </div>
+    </div>
+
+    <script src="/static/js/script.js?v=1.0"></script>
+</body>
+</html>
